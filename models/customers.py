@@ -8,11 +8,13 @@ class CustomerModel(db.Model):
     name = db.Column(db.String(100))
     newsletter_status = db.Column(db.Boolean, default=False)
 
-    def __init__(self, username, email, name, newsletter_status):
-        self.username = username
-        self.email = email
-        self.name = name
-        self.newsletter_status = newsletter_status
+    trips = db.relationship('TripModel')
+
+    def __init__(self, trip_id, destination, price, customer_username):
+        self.trip_id = trip_id
+        self.destination = destination
+        self.price = price
+        self.customer_username = customer_username
 
     def find_by_username(self, username):
         return CustomerModel.query.filter_by(username=username).first()
@@ -22,7 +24,8 @@ class CustomerModel(db.Model):
             'username': self.username,
             'email': self.email,
             'name': self.name,
-            'newsletter_status': self.newsletter_status
+            'newsletter_status': self.newsletter_status,
+            'trips': [trip.json() for trip in self.trips]
         }
 
     def create_customer(self):
