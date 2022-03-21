@@ -16,6 +16,7 @@ api.add_resource(Customers, '/customers')
 api.add_resource(Customer, '/customer/<string:username>')
 api.add_resource(Trips, '/trips')
 api.add_resource(Trip, '/trip/<int:trip_id>')
+api.add_resource(HomePage, '/')
 
 if __name__ == '__main__':
 

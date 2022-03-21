@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Agency API</title>
+</head>
+<body>
+    <h1>TravelAgency Customers API</h1>
+    <p><b>Simple API for maintaining customers of Travel Agency company</b></p>
+    <h3>Access</h3>
+    <p>To access users data, an API key is required. Please, contact our system administrator.</p>
+    <h3>Usage</h3>
+    <p>API provides information about users and their trips, data are presented in JSON format. Accessible endpoints are:</p>
+    <table cellpadding="4">
+        <tr> <td> <b>HTTP Method</b> </td>  <td> <b>Endpoint</b> </td>              <td> <b>Description</b></td>  </tr>
+        <tr> <td>GET</td>                   <td>/</td>                              <td>This homepage</td> </tr>
+        <tr> <td>GET</td>                   <td>/customers</td>                     <td>Get all customers</td> </tr>
+        <tr> <td>GET</td>                   <td>/customer/&ltstring:username&gt</td><td>Get specific customer</td> </tr>
+        <tr> <td>POST</td>                  <td>/customer/&ltstring:username&gt</td><td>Create new customer</td> </tr>
+        <tr> <td>PUT</td>                   <td>/customer/&ltstring:username&gt</td><td>Update customer</td> </tr>
+        <tr> <td>DELETE</td>                <td>/customer/&ltstring:username&gt</td><td>Delete customer</td> </tr>
+        <tr> <td>GET</td>                   <td>/trips</td>                         <td>Get all trips</td> </tr>
+        <tr> <td>GET</td>                   <td>/trip/&ltint:trip_id&gt</td>        <td>Get specific trip</td> </tr>
+        <tr> <td>POST</td>                  <td>/trip/&ltint:trip_id&gt</td>        <td>Create new trip</td> </tr>
+        <tr> <td>PUT</td>                   <td>/trip/&ltint:trip_id&gt</td>        <td>Update existing trip</td> </tr>
+        <tr> <td>DELETE</td>                <td>/trip/&ltint:trip_id&gt</td>        <td>Delete trip</td> </tr>
+    </table>
+</body>
+</html>
